@@ -365,8 +365,8 @@ a {
 
 .hidden {
   display: none !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
+  transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
 }
 
 .button {
@@ -662,6 +662,8 @@ a {
   background-position: right;
   outline: none;
   background-size: 30px;
+  -webkit-transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
+  transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
 }
 
 .feature__link_active {
@@ -692,6 +694,11 @@ a {
   line-height: 1.6;
 }
 
+.feature-sub {
+  -webkit-transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
+  transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
+}
+
 .feature-sub__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,6 +710,8 @@ a {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 10px;
+  -webkit-transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
+  transition: all 0.3s cubic-bezier(0, 2.07, 1, 1);
 }
 
 /* contacts */
