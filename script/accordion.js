@@ -1,32 +1,16 @@
-const btns = document.querySelectorAll('.feature__link');
-const lists = document.querySelectorAll('.feature-sub');
-//
-btns.forEach((btnItem,index) => {
-    btnItem.addEventListener('click', () => {
-        btns.forEach((btnItem ) => {
-            if(btnItem.classList.contains('feature__link_active')) {
-                btnItem.classList.remove('feature__link_active')
-            };
+const lists = document.querySelectorAll(".feature-sub");
+const btns = document.querySelectorAll(".feature__link");
 
-        })
-        btnItem.classList.add('feature__link_active')
-
-
-
-        lists.forEach((listItem, index) => {
-            listItem.classList.add('hidden');
-        })
-
-        lists[index].classList.remove('hidden');
-
-
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].addEventListener('click', () => {
-                btns[i].classList.toggle('feature__link_active');
-                lists[i].classList.toggle('hidden');
-            })
-        }
-    })
-
-
-})
+btns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    btns.forEach((btnItem, idx) => {
+      if (btnItem === btn) {
+        btnItem.classList.toggle("feature__link_active");
+        lists[idx].classList.toggle("hidden");
+      } else {
+        btnItem.classList.remove("feature__link_active");
+        lists[idx].classList.add("hidden");
+      }
+    });
+  });
+});
