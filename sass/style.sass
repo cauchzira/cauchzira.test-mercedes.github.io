@@ -99,6 +99,7 @@
     display: flex
     justify-content: space-between
   &__title
+    animation: showImages 1.5s linear forwards
     margin-bottom: 49px
   &-list
     display: flex
@@ -113,16 +114,19 @@
         margin-left: 50px
       &_active
         color: $white
+        transition: all 2s linear
         border-bottom: 2px solid $white
   &__descr
     margin: 0 0 28px 0
     font-size: 16px
     line-height: 1.6
+    animation: showImages 2s linear forwards
   &-images
     display: flex
     justify-content: space-between
   &__img
     display: block
+    animation: showImages 2s linear forwards
     width: 23%
     object-fit: cover
 .more
@@ -132,6 +136,13 @@
   line-height: 1.6
   background-color: transparent
   border: none
+
+  @keyframes showImages
+    0%
+      opacity: 0
+
+    100%
+      opacity: 1
 
 /* feature */
 .feature
@@ -145,6 +156,7 @@
     padding-left: 50%
     min-height: 550px
   &__img
+    animation: showImages 2s linear forwards
     width: 900px
     min-width: 900px
     object-fit: contain
@@ -180,7 +192,7 @@
       font-size: 24px
       line-height: 1.6
   &-sub
-    transition: all .3s cubic-bezier(0, 2.07, 1, 1)
+    animation: showImages 1.5s linear forwards
     &__item
       display: flex
       justify-content: space-between
